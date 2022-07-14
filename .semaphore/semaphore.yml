@@ -15,7 +15,8 @@ blocks:
       jobs:
         - name: Setup
           commands:
-            - bundle install --deployment --path vendor/bundle
+            - bundle config set --local deployment 'true'
+            - bundle install --path vendor/bundle
             - 'bundle exec rake db:setup'
             - 'bundle exec rake db:test:prepare'
         - name: RSpec Tests
