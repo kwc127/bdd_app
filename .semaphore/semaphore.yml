@@ -17,7 +17,7 @@ blocks:
           commands:
             - bundle config set --local path 'vendor/bundle'
             - bundle config set --local deployment 'true'
-            - bundle install --path vendor/bundle
+            - bundle install
             - 'bundle exec rake db:setup'
             - 'bundle exec rake db:test:prepare'
         - name: RSpec Tests
