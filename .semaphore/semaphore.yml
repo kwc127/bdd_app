@@ -15,7 +15,8 @@ blocks:
       jobs:
         - name: Setup
           commands:
-            - ls -l
+            - sem-version ruby 2.7.2
+            - checkout
             - bundle install
         - name: RSpec Tests
           commands:
