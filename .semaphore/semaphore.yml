@@ -18,6 +18,8 @@ blocks:
             - sem-version ruby 2.7.2
             - checkout
             - bundle install
+            - 'bundle exec rake db:setup'
+            - 'bundle exec rake db:test:prepare'
         - name: RSpec Tests
           commands:
             - bundle exec rspec
