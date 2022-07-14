@@ -16,6 +16,7 @@ blocks:
         - name: Setup
           commands:
             - sem-version ruby 2.7.2
+            - sem-service start postgres
             - checkout
             - bundle install
             - 'bundle exec rake db:setup'
