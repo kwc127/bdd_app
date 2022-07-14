@@ -21,6 +21,4 @@ blocks:
             - bundle install
             - 'bundle exec rake db:setup'
             - 'bundle exec rake db:test:prepare'
-        - name: 'Job #2'
-          commands:
             - bundle exec rspec
